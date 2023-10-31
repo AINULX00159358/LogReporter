@@ -33,8 +33,9 @@ app.options("/*", function(req, res, next){
 });
 
 app.post("/", (req, res) => {
-  //console.log("HEADERS", req.headers);
-  console.log(req.body);
+  console.log("HEADERS", req.headers);
+  console.log(JSON.stringify(JSON.parse(req.body), null, 2));
+  console.log("---------------------------------------------");
   res.status(200).end();
 });
 
